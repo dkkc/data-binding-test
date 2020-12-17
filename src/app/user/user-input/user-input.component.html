@@ -1,0 +1,24 @@
+<form class="userForm" ngForm>
+    <div class='row'>
+        <label class="label" for="name">User name</label>
+        <input type="text" id="name" name="name" #nameInput/>
+        <!-- <input type="text" id="nameModel"
+               [(ngModel)]="name"
+               [ngStyle]="{borderLeft: name === ''? '4px solid red': '' }"
+               name="name"/> -->
+        <!--        <p *ngIf="name === ''" class="warning">This field is mandatory</p>-->
+    </div>
+    <div class='row'>
+        <label class="label" for="lastName">User last name</label>
+        <input type="text" id="lastName" name="lastName" #lastNameInput>
+        <!-- <label class="label" for="lastName">User last name model</label>
+        <input type="text" id="lastNameModel" [(ngModel)]="lastName" name="lastName">
+      <p>{{ lastName }}</p> -->
+    </div>
+    <div class="row">
+        <label class="label" for="email">Email</label>
+        <input type="text" id="email" name="email" #emailInput>
+    </div>
+    <button (click)="onAddUser()" class="btn">Add user</button>
+    <!--  <button (click)="onAddUserData(userInput, lastNameInput)" class="btn">Submit</button>-->
+</form>

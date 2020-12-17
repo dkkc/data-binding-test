@@ -1,0 +1,5 @@
+<app-user-input (addUser)="addUser($event)"></app-user-input>
+<div *ngIf="users.length > 0">
+    <app-user-list *ngFor="let user of users" [userName]="user.name" [userLastName]="user.lastName" [email]="user.email">
+    </app-user-list>
+</div>
